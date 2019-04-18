@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html range="ko">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <a href="{% url 'create' %}">추가</a>
+    <table>
+    {% for object in object_list %}
+        <tr>
+            <td><a href="{% url 'detail' object.id %}">{{ object.id }}</a></td>
+            <td>{{object.weight}}</td>
+            <td>{{object.height}}</td>
+            <td>{{object.bmi_score}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
+

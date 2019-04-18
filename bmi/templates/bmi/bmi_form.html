@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html range="ko">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>
+
